@@ -45,4 +45,6 @@ legend("topleft",legend=c("Observed y","Fitted y"),
 col=c("red","blue"),lwd=2,,pch=16)
 
 # print the parameter values
-print(x0);print(L);print(k)
+print(x0)
+print(L)
+print(k)
