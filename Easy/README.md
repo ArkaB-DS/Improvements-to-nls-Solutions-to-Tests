@@ -1,3 +1,5 @@
+## Easy
+
 This folder contains 3 files -
   - R file - containing the R code solution 
   - Image file - containing the final plot 
