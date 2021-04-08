@@ -32,12 +32,12 @@ b <- a/y[1]-1
 
 # approximate value of c
 
-time<-time[y!=a&&(b*y/(a-y))>0]
+time<-time[y!=a&(b*y/(a-y))>0]
 y<-y[b*y/(a-y)>0&y!=a]
 
 c<-log( (b*y)/(a-y) )/time
-c<-mean(c[-length(c)])
-
+#c<-mean(c[-length(c)])
+c<-mean(c)
 # plot of fitted y values
 lines(time, a/(1+b*exp(-c*time)),type="o",lwd=2,col="blue")
 legend("topleft",legend=c("Observed y","Fitted y"),
