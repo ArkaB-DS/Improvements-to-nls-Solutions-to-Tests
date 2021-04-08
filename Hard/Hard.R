@@ -58,7 +58,7 @@ jacobian<-function(x,observed,Pars){
 
 # the approximate jacobian function is- 
 jacobian.approx<-function(x,observed,parS){
-	delta<- 5
+	delta<- 5 # the smaller the better
 	mat <- matrix(0,nrow=length(x),ncol=length(parS))
       colnames(mat)<-c("a","b","c")
 	mat[,"a"]<-  ((parS$a+delta) /(1+  parS$b*exp(-x * parS$c))-
@@ -73,22 +73,24 @@ jacobian.approx<-function(x,observed,parS){
 # fitting the nonlinear model based on approximate jacobian
 nls.out.approx <- nls.lm(par=parStart, fn = residFun, observed = y,
 x = time, control = nls.lm.control(nprint=1),jac=jacobian.approx)
-summary(nls.out.approx)
-nls.out.approx$par
 a.est.approx=nls.out.approx$par[["a"]]
 b.est.approx=nls.out.approx$par[["b"]]
 c.est.approx=nls.out.approx$par[["c"]]
+cat("The estimate of 'a' using approximation is : ",a.est.approx,"\n")
+cat("The estimate of 'b' using approximation is : ",b.est.approx,"\n")
+cat("The estimate of 'c' using approximation is : ",c.est.approx,"\n")
 lines(time,a.est.approx/(1 + b.est.approx * exp(-c.est.approx * time)),
 col="blue",pch=16,lwd=2)
 
 # fitting the nonlinear model based on Jacobian
 nls.out <- nls.lm(par=parStart, fn = residFun, observed = y,
 x = time, control = nls.lm.control(nprint=1),jac=jacobian)
-summary(nls.out)
-nls.out$par
 a.est=nls.out$par[["a"]]
 b.est=nls.out$par[["b"]]
 c.est=nls.out$par[["c"]]
+cat("The estimate of 'a' using analytic Jacobian is : ",a.est,"\n")
+cat("The estimate of 'b' using analytic Jacobian is : ",b.est,"\n")
+cat("The estimate of 'c' using analytic Jacobian is : ",c.est,"\n")
 lines(time,a.est/(1 + b.est * exp(-c.est * time)),col="seagreen",pch=16,lwd=2)
 legend("topleft",legend=c("observed y","fitted y(approx)","fitted y(Jacobian)"),
 pch=c(16,NA,NA),lwd=2,col=c("red","blue","seagreen"),cex=0.8)
