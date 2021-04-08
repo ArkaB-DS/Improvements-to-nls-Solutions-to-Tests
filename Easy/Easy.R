@@ -42,7 +42,7 @@ k<-mean(k)
 # plot of the fitted values
 lines(time, L/(1+exp(-k*(time-x0))),type="o",lwd=2,col="blue")
 legend("topleft",legend=c("Observed y","Fitted y"),
-col=c("red","blue"),lwd=2,,pch=16)
+col=c("red","blue"),lwd=2,pch=16)
 
 # print the parameter values
 print(x0)
