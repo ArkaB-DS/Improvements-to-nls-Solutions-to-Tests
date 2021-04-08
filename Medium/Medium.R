@@ -32,8 +32,8 @@ b <- a/y[1]-1
 
 # approximate value of c
 
-time<-time[y!=a&(b*y/(a-y))>0]
-y<-y[b*y/(a-y)>0&y!=a]
+time<-time[y!=a]
+y<-y[y!=a]
 
 c<-log( (b*y)/(a-y) )/time
 #c<-mean(c[-length(c)])
