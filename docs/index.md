@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# Improvements to nls(): Solutions to Tests
+<img src="https://1.bp.blogspot.com/-8g85F6YR8r0/WpcCNxJM_sI/AAAAAAAABbc/tpLh1if0MgYS3l1vqaEMwLPAaxC_nv81QCLcBGAs/s1600/GSoC%2B-%2BVertical%2BWide%2B-%2BGray%2BText%2B-%2BWhite%2BBG.png" width="700" height="350"/>
 
-You can use the [editor on GitHub](https://github.com/ArkaB-DS/Improvements-to-nls-Solutions-to-Tests/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+### Description
+This repository contains my solutions to the tests in GSOC(2021)'s R-project - "**Improvements to nls()**". I had to complete these before contacting the mentors of this project. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Table of Contents
+This repository contains three folders -
 
-### Markdown
+### 1. Easy :
+  - **R file** - containing the R code solution 
+  - **Image file** - containing the final plot 
+  - **R Markdown file(pdf version)** - pdf version  containing necessary explanations to my solution. It has the R code and the outputs as well.  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 2. Medium :
+  - **R file** - containing the R code solution 
+  - **Image file** - containing the final plot 
+  - **R Markdown file(pdf version)** - containing necessary explanations to my solution. It has the R code and the outputs as well. 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ArkaB-DS/Improvements-to-nls-Solutions-to-Tests/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### 3. Hard :
+  - **R file** - containing the R code solution 
+  - **Image file** - containing the final plot 
+  - **R Markdown file(pdf version)** - containing necessary explanations to my solution. It has the R code and the outputs as well. 
